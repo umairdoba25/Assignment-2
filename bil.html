@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parents
+        {
+            display: flex;
+            
+            
+        }
+        tr,td
+        {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="parents">
+        <div class="child">
+            <fieldset>
+                <legend>personal information</legend>
+                <table>
+                    <tr>
+                        <td>Full name</td>
+                        <td><input type="text" id="name1"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" id="email1"></td>
+                    </tr>
+                </table>
+               
+            </fieldset>
+            <fieldset>
+                <legend>Your Oder</legend>
+                <table>
+
+                    <tr>
+                        <td>Item Name</td>
+                        <td>Qty</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Karahi</td>
+                        <td><input type="text" id="k1"></td>
+                    </tr>
+                    <tr>
+                        <td>Malai Boti</td>
+                        <td><input type="text" id="boti1"></td>
+                    </tr>
+                    <tr>
+                        <td>Reshmi Kabab</td>
+                        <td><input type="text" id="kabab1"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            </div>
+                <div class="child">
+                    <fieldset>
+                        <legend>Your Bill</legend>
+                        <h4>Your Name <span id="name2"></span> </h4 >
+                        <h4>Your Email <span id="email2"></span></h4>
+                        <table class=>
+                            <tr>
+                                <td>Menu</td>
+                                <td>Price</td>
+                                <td>Qty</td>
+                                <td>Amount</td>
+                            </tr>
+                          
+                            <tr>
+                                <td>karahi</td>
+                                <td> <span id="k2">350</span></td>
+                                <td> <span id="k3"></span></td>
+                                <td id="k4"></td>
+                            
+                            </tr>
+                            <tr>
+                                <td >Boti</td>
+                                <td><span id="boti2">200</span></td>
+                                 <td id="boti3"></td>
+                                <td id="boti4"></td>
+                    
+                            </tr>
+
+            
+                            <tr>
+                                <td>kabab</td>
+                                <td><span id="kabab2">400</span></td>
+                                <td id="kabab3"></td>
+                                <td id="kabab4"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <legend>Your Bill Amount </legend>
+                </div>
+            </div>
+
+</body>
+<script>
+//     var full = document.getElementById('main1').value;
+//     var tikka=document.getElementById('tikka').addEventListener('keyup',function(){ 
+//     var malti=tikka*main1;
+//     document.getElementById('tikka1').innerHTML= malti =this .value;
+//  })
+
+ var name= document.getElementById('name1').addEventListener('keyup',function(){
+    document.getElementById('name2').innerHTML=this.value;
+ })
+ var email=document.getElementById('email1').addEventListener('keyup',function(){
+    document.getElementById('email2').innerHTML=this.value;
+ })
+
+
+
+ var karahi = document.getElementById('k1').addEventListener('keyup',function(){
+    document.getElementById('k3').innerHTML=this.value;
+ });
+
+ var boti = document.getElementById('boti1').addEventListener('keyup',function(){
+    document.getElementById('boti3').innerHTML=this.value;
+ });
+
+ var kabab = document.getElementById('kabab1').addEventListener('keyup',function(){
+    document.getElementById('kabab3').innerHTML=this.value;
+ });
+
+
+ document.writeln('<button onclick="calc()">Calculate</button>')
+ //  var am = document.getElementById('k3').addEventListener("keyup", function(){
+    //     document.getElementById('k4').innerHTML = k*q;
+    //  })
+    
+    function calc(){
+    var kk = document.getElementById('k2').innerHTML;
+    var qtt = document.getElementById('k3').value;
+    document.getElementById('k4').innerHTML = kk*qtt;
+}
+
+//  var amnt = document.getElementById('karahi2').innerHTML;
+//  var karahi1 = document.getElementById('karahi3').value;
+//  var karahi2 = document.getElementById('karahi3').addEventListener('keyup',function(){
+//     document.getElementById('karahi4').innerHTML = amnt*karahi1;
+//  })
+ 
+
+
+
+</script>
+</html>
